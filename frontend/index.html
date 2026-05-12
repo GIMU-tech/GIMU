@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+        name="description"
+        content="AI-powered web IDE with integrated code editor, terminal, and AI assistant"
+    />
+
+    <title>AI IDE — Deep Space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+
+    <link
+        rel="stylesheet"
+        href="css/style.css?v=1.2"
+    />
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js">
+    </script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span>Explorer</span>
+            <div class="sidebar-actions">
+                <button id="newFileBtn" title="New File">+F</button>
+                <button id="newFolderBtn" title="New Folder">+D</button>
+                <button id="refreshBtn" title="Refresh">↻</button>
+            </div>
+        </div>
+        <div id="fileList"></div>
+    </aside>
+
+    <div class="resizer-h" id="resizer-sidebar"></div>
+
+    <!-- CENTER -->
+    <div class="center-area" id="centerArea">
+
+        <section class="editor" id="editorSection">
+            <div class="editor-header">
+                <span id="currentFile">No file selected</span>
+                <button id="saveButton">Save</button>
+            </div>
+            <div id="editor"></div>
+        </section>
+
+        <div class="resizer-v" id="resizer-terminal"></div>
+
+        <section class="terminal" id="terminalSection">
+            <div class="terminal-header">Terminal</div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-output" id="terminalOutput"></div>
+                <div class="terminal-input-line" id="terminalInputLine">
+                    <span class="terminal-prompt" id="terminalPrompt">PS C:\ai-system></span>
+                    <input type="text" id="terminalInput" spellcheck="false" autocomplete="off" />
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="resizer-h" id="resizer-chat"></div>
+
+    <!-- CHAT -->
+    <aside class="chat-panel" id="chatPanel">
+        <div class="chat-header">AI</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="AI에게 요청..." />
+            <button id="sendButton">Send</button>
+        </div>
+    </aside>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal-overlay hidden">
+    <div class="modal-box">
+        <div class="modal-title" id="modalTitle">새 파일</div>
+        <div class="modal-subtitle" id="modalSubtitle">파일 경로를 입력하세요</div>
+        <input
+            type="text"
+            class="modal-input"
+            id="modalInput"
+            placeholder="example.py"
+        />
+        <div class="modal-actions">
+            <button class="modal-btn modal-btn-cancel" id="modalCancel">취소</button>
+            <button class="modal-btn modal-btn-confirm" id="modalConfirm">생성</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js?v=1.1"></script>
+
+</body>
+</html>

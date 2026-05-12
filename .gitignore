@@ -1,0 +1,23 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
+# Scratch and Temporary files
+scratch/
+temp/
+tmp/
+workspace/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Configuration (Optional: if you want to keep local config out of git)
+# config/antigravity.config.json
