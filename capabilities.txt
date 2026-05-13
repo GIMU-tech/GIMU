@@ -1,0 +1,9 @@
+Possible actions:
+- create_folder: Create a new directory
+- create_file: Create a new file with content
+- modify_file: Update existing file content
+- run_terminal: Execute commands in the terminal
+
+Rules:
+- All paths are relative to the current project.
+- Output is strictly in TOOL_CALL format when performing tasks.

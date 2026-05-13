@@ -1,0 +1,26 @@
+{
+  "_migrated": true,
+  "_migrated_v2": true,
+  "secretary": {
+    "activatedAt": "2026-05-12T13:08:20.697Z",
+    "seeded": true
+  },
+  "youtube": {
+    "activatedAt": "2026-05-12T13:08:20.697Z",
+    "seeded": true
+  },
+  "writer": {
+    "activatedAt": "2026-05-12T13:08:20.697Z",
+    "seeded": true
+  },
+  "designer": {
+    "activatedAt": "2026-05-12T13:08:20.697Z",
+    "seeded": true
+  },
+  "developer": {
+    "activatedAt": "2026-05-12T15:05:40.734Z"
+  },
+  "researcher": {
+    "activatedAt": "2026-05-12T15:05:43.467Z"
+  }
+}
